@@ -1,0 +1,86 @@
+/* app.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.message-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  text-align: center; /* Center the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #E7883D;
+  border-bottom: 2px solid #E7883D;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%; /* Ensure the border spans the full width */
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+  max-width: 80%; /* Limit the width of paragraphs for better readability */
+}
+
+p:hover {
+  transform: translateY(-5px); /* Changed to vertical movement for centered text */
+}
+
+p:last-child {
+  font-style: italic;
+  color: #E7883D;
+  font-weight: 400;
+  border-top: 1px solid rgba(231, 136, 61, 0.3);
+  padding-top: 15px;
+  width: 100%; /* Ensure the border spans the full width */
+}
+
+@media (max-width: 600px) {
+  .message-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  p {
+    font-size: 1em;
+    max-width: 95%; /* Adjust for smaller screens */
+  }
+}
